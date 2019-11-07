@@ -338,8 +338,14 @@ template {
   src: url("../fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
 }
 
-.body {
+@font-face {
+  font-family: "Gotham-Book";
+  src: url("../fonts/Gotham-Book.otf") format("otf");
+}
+
+body {
   font-family: "Bernina";
+  background-color: #e7f8fc !important;
 }
 
 img {
@@ -355,7 +361,7 @@ img {
 }
 
 .texte-petit {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 header .container-full {
@@ -372,11 +378,12 @@ header .container-full .promo {
   border-radius: 5px;
   padding: 10px;
   position: relative;
-  left: 16%;
+  left: calc(100% - 270px);
   text-align: center;
   top: 100px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
+  font-size: larger;
 }
 
 header .container-full .promo span {
@@ -397,6 +404,7 @@ header .container-full .slogan {
 header .container-full .slogan .slogan-texte {
   color: white;
   margin-left: 15px;
+  font-size: larger;
 }
 
 header .container-full .slogan .slogan-texte span {
@@ -412,23 +420,87 @@ header .container-full .slogan .slogan-texte span {
 
 .container .intro > div {
   width: 50%;
+  height: 100px;
+}
+
+.container .intro .logo {
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container .intro .prendre-rdv {
   padding: 30px 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 .container .intro .prendre-rdv button {
-  width: 100%;
+  width: 150px;
   border-radius: 5px;
   border: 1px solid black;
-  background-color: white;
+  background-color: #e7f8fc;
   cursor: pointer;
+  color: #083843;
+  transition: .3s;
+}
+
+.container .intro .prendre-rdv button:hover {
+  background-color: #083843;
+  color: #e7f8fc;
+}
+
+.container .title, .container .description {
+  color: #083843;
+  text-align: center;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.container .texte-ice-experience {
+  margin-left: 10px;
+  color: #083843;
+  font-family: "Gotham-Book";
+}
+
+.container .techniques {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.container .techniques .tech {
+  text-align: center;
+}
+
+.container .techniques .tech img {
+  border-radius: 50%;
+}
+
+.container .techniques .tech h5 {
+  font-family: "Gotham-Book";
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 668px) {
-  .container {
-    max-width: 668px;
+  .container .techniques .t1 {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .container .techniques .t2 {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .container .techniques .t3 {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .container .techniques .tech img {
+    width: 85%;
   }
 }
 
@@ -436,75 +508,31 @@ header .container-full .slogan .slogan-texte span {
   header .container-full {
     height: 800px;
   }
+  header .container-full .slogan {
+    top: 620px;
+  }
+  header .container-full .slogan .slogan-texte span {
+    display: initial;
+  }
+  header .container-full .promo {
+    left: calc(100% - 340px);
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .container .intro .prendre-rdv {
+    padding-top: 10px;
+  }
+  .container .intro .prendre-rdv button {
+    height: 40px;
+  }
+  .container .texte-ice-experience {
+    float: right;
+  }
+  .container .techniques {
+    clear: both;
+  }
 }
-
-/*$orange:rgb(252, 183, 49);
-$grey:rgb(109, 111, 113);
-$green1: rgb(179, 209, 67);
-$green2: rgb(100, 123, 34);
-
-
-.container{
-    width:100%;
-    text-align:center;
-    .logo-entreprise{
-        max-height:60px;
-    }
-    .slogan{
-        color:$orange;
-    }
-    .pictos .picto{
-        width:40%;
-        margin:0;
-        display:inline-block;
-    }
-    .pictos .picto img{
-        width:100px;
-        margin:20px;
-    }
-}
-
-.container-full{
-    width:100%;
-}
-
-// ou -> pictos: display:flex; flex-wrap:wrap; et les enfants: .picto: width:50%
-
-.textes-1{
-    margin-top:30px;
-    background-image: url('../svg/points.svg');
-    .container{
-        display:flex;
-        flex-direction:column;
-        p:nth-child(1){
-            font-weight:bold;
-        }
-    }
-}
-
-@media (min-width:$breakpoint-2){
-    .pictos .picto{
-        width:24% !important;
-        margin:0 !important;
-        display:inline-block;
-    }
-}
-
-@media (min-width:$breakpoint-1){
-    .container{
-        max-width:$breakpoint-1;
-        margin:0 auto;
-        .logo-entreprise{
-            max-height:100px;
-        }
-        .pictos .picto{
-            margin-top:30px;
-            height:180px;
-        }
-    }
-    .textes-1 .container{
-        flex-direction:row;
-    }
-}*/
 
 /*# sourceMappingURL=site.css.map */
