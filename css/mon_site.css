@@ -366,7 +366,7 @@ img {
 
 header .container-full {
   height: 600px;
-  background-image: url(".././background.jpg");
+  background-image: url(".././background.jpg?1");
   background-position-x: center;
   background-size: cover;
 }
@@ -481,7 +481,7 @@ header .container-full .slogan .slogan-texte span {
   border-radius: 50%;
 }
 
-.container .techniques .tech h5 {
+.container .techniques .tech h3 {
   font-family: "Gotham-Book";
   margin-top: 10px;
 }
