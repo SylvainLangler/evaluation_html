@@ -1,0 +1,190 @@
+$breakpoint-1:466px;
+$breakpoint-2:668px;
+$breakpoint-3:900px;
+$background-bleu: rgb(231, 248, 252);
+$couleur-texte: rgb(22, 80, 95);
+$couleur-promo: rgb(128, 3, 32);
+$gris-transparent: rgba(226,226,226, 0.5);
+
+// Ne marche pas en local
+@font-face {
+    font-family: "Bernina";
+    src: url("../fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2")
+}
+
+.body{
+    font-family:"Bernina";
+}
+
+img{
+    width:100%;
+}
+
+.container{
+    width:100%;
+}
+
+.container-full{
+    width:100%;
+}
+
+.texte-petit{
+    font-size:10px;
+}
+
+header{
+    .container-full{
+        height:600px;
+        background-image:url('.././background.jpg');
+        background-position-x: center;
+        background-size: cover;
+        .promo{
+            width:250px;
+            height:100px;
+            background-color:$couleur-promo;
+            border-radius:5px;
+            padding:10px;
+            position:relative;
+            left:16%;
+            text-align:center;
+            top:100px;
+            transform: rotate(20deg);
+            span{
+                color:white;
+            }
+        }
+        .slogan{
+            display: flex;
+            align-items: center;
+            height:50px;
+            background-color:$gris-transparent;
+            position:relative;
+            top:440px;
+            .slogan-texte{
+                color:white;
+                margin-left:15px;
+                span{
+                    display:block;
+                }
+            }
+        }
+    }
+}
+
+.container{
+    .intro{
+        display:flex;
+        flex-wrap:wrap;
+        > div{
+            width:50%;
+        }
+        .prendre-rdv{
+            padding: 30px 10px;
+            button{
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid black;
+                background-color: white;
+                cursor:pointer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:$breakpoint-2){
+    .container{
+        max-width:$breakpoint-2;
+    }
+}
+
+@media screen and (min-width:$breakpoint-3){
+    header{
+        .container-full{
+            height:800px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*$orange:rgb(252, 183, 49);
+$grey:rgb(109, 111, 113);
+$green1: rgb(179, 209, 67);
+$green2: rgb(100, 123, 34);
+
+
+.container{
+    width:100%;
+    text-align:center;
+    .logo-entreprise{
+        max-height:60px;
+    }
+    .slogan{
+        color:$orange;
+    }
+    .pictos .picto{
+        width:40%;
+        margin:0;
+        display:inline-block;
+    }
+    .pictos .picto img{
+        width:100px;
+        margin:20px;
+    }
+}
+
+.container-full{
+    width:100%;
+}
+
+// ou -> pictos: display:flex; flex-wrap:wrap; et les enfants: .picto: width:50%
+
+.textes-1{
+    margin-top:30px;
+    background-image: url('../svg/points.svg');
+    .container{
+        display:flex;
+        flex-direction:column;
+        p:nth-child(1){
+            font-weight:bold;
+        }
+    }
+}
+
+@media (min-width:$breakpoint-2){
+    .pictos .picto{
+        width:24% !important;
+        margin:0 !important;
+        display:inline-block;
+    }
+}
+
+@media (min-width:$breakpoint-1){
+    .container{
+        max-width:$breakpoint-1;
+        margin:0 auto;
+        .logo-entreprise{
+            max-height:100px;
+        }
+        .pictos .picto{
+            margin-top:30px;
+            height:180px;
+        }
+    }
+    .textes-1 .container{
+        flex-direction:row;
+    }
+}*/
