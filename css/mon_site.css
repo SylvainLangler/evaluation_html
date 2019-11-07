@@ -486,7 +486,7 @@ header .container-full .slogan .slogan-texte span {
   margin-top: 10px;
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 768px) {
   .container .techniques .t1 {
     -ms-flex-order: 2;
         order: 2;
